@@ -15,4 +15,61 @@ html, body {
 
 /* ID Definitions */
 
+#chipher {
+  /* border: 3px solid red; */
+  display: flex;
+  width: 500px;
+}
+
+#container {
+  align-items: center;
+  background-attachment: fixed;
+  background-image: url('background-img.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  overflow: auto;
+  width: 100vw;
+}
+
+#input-text {
+  background-color: white;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+  height: 30px;
+  width: 100%;
+}
+
+#result {
+  /* border: 1px solid red; */
+  color: white;
+  font-size: 4em;
+  height: 100px;
+  margin: 0;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+#submit-btn {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+  height: 30px;
+  margin-left: 5px;
+  width: 100px;
+}
+
+#submit-btn:active {
+  outline: none;
+  transform: scale(0.99);
+}
+
+
 /* Media Queries */

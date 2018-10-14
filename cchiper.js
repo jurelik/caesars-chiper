@@ -1,13 +1,14 @@
-function rot13(str) { // LBH QVQ VG!
+// Chipher Code
+function rot13(str) {
 
-  let arr = str.split("");
+  let arr = str.toUpperCase().split("");
   let chiper = [];
   let highNum = 90;
   let lowNum = 65;
   let amountOfDisplacement = 13;
 
   arr.forEach(char => {
-    let regex = /\W+|_+/;
+    let regex = /[^A-Z]+|_+/;
 
     if (regex.test(char)) {
       chiper = chiper.concat(char);
@@ -21,10 +22,19 @@ function rot13(str) { // LBH QVQ VG!
   });
 
   str = chiper.join("");
-
-  console.log(str);
   return str;
 }
 
-// Change the inputs below to test
-rot13("SERR PBQR PNZC");
+// DOM Code
+
+let button = document.getElementById('submit-btn');
+let form = document.getElementById('chipher');
+let input = document.getElementById('input-text');
+let result = document.getElementById('result');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+  result.innerHTML = rot13(input.value);
+  button.blur();
+});
