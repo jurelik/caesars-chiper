@@ -25,6 +25,7 @@ html, body {
   align-items: center;
   background-attachment: fixed;
   background-image: url('background-img.jpg');
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   /* border: 1px solid red; */
@@ -33,6 +34,7 @@ html, body {
   height: 100vh;
   justify-content: center;
   overflow: auto;
+  position: fixed;
   width: 100vw;
 }
 
@@ -46,13 +48,23 @@ html, body {
   width: 100%;
 }
 
+#input-text:active, #input-text:focus {
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
 #result {
+  align-items: flex-start;
   /* border: 1px solid red; */
   color: white;
+  display: flex;
   font-size: 4em;
-  height: 100px;
+  height: 74px;
+  justify-content: center;
   margin: 0;
+  text-align: center;
   text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+  width: 100vw;
 }
 
 #submit-btn {
@@ -60,16 +72,37 @@ html, body {
   border: none;
   border-radius: 5px;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
   font-size: 1em;
   height: 30px;
   margin-left: 5px;
+  transition: box-shadow 0.05s ease, transform 0.05s ease;
   width: 100px;
 }
 
 #submit-btn:active {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
   outline: none;
   transform: scale(0.99);
 }
 
-
 /* Media Queries */
+
+@media screen and (max-width: 530px) {
+  #chipher {
+    align-items: center;
+    flex-direction: column;
+    width: 70vw;
+  }
+
+  #container {
+    background-size: cover;
+  }
+
+  #submit-btn {
+    margin-left: 0;
+    margin-top: 5px;
+    width: 70vw;
+  }
+
+}

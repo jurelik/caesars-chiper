@@ -1,3 +1,7 @@
+// Focus text input on load
+// document.getElementById('input-text').focus();
+// Used autofocus on input tag instead
+
 // Chipher Code
 function rot13(str) {
 
